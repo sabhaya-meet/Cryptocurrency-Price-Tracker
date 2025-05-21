@@ -3,7 +3,7 @@ import React from "react";
 const Button = ({ text, onClick, outlined }) => {
   return (
     <button
-      className={`py-[0.5rem] px-[1.5rem] rounded-4xl font-semibold cursor-pointer transition
+      className={`py-[0.5rem] px-[1.5rem] rounded-4xl font-semibold text-center min-w-[166px] cursor-pointer transition
         ${
           outlined
             ? "border-2 border-[var(--blue)] bg-[var(--black)] text-[var(--white)] hover:bg-[var(--blue)] hover:text-[var(--white)]"
