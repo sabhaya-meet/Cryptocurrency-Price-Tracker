@@ -1,14 +1,24 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Common/Footer/Footer";
-import Header from "./components/Common/Header/Header";
-import MainComponent from "./components/LandingPage/MainComponent";
+import HomeMain from "./pages/HomeMain";
+import DashBoard from "./pages/DashBoard";
+import Coin from "./pages/Coin";
+import Compare from "./pages/Compare";
+import WatchList from "./pages/WatchList";
 
 function App() {
   return (
     <div>
-      <Header />
-      <MainComponent />
-      {/* <Footer /> */}
+      {/* <HomeMain /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeMain />} />
+          <Route path="/dashboard" element={<DashBoard />} />
+          <Route path="/coin/:id" element={<Coin />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="/watchlist" element={<WatchList />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
