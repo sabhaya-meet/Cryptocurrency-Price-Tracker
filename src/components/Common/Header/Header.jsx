@@ -1,6 +1,7 @@
 import React from "react";
 import AnchorTemporaryDrawer from "./Drawer";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,34 +12,30 @@ const Header = () => {
           CryptoTracker<span className="text-[var(--blue)]">.</span>
         </h1>
         <div className="flex justify-end items-center gap-5">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-[var(--grey)] font-bold hover:text-[var(--white)]"
           >
             <p>Home</p>
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/compare"
             className="text-[var(--grey)] font-bold hover:text-[var(--white)] "
           >
             <p>Compare</p>
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/watchlist"
             className="text-[var(--grey)] font-bold hover:text-[var(--white)]"
           >
             <p>Watchlist</p>
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/dashboard"
             className="text-[var(--grey)] font-bold hover:text-[var(--white)]"
           >
-            <Button
-              text="Dashboard"
-              outlined={true}
-              onClick={() => console.log("mettttttttttt")}
-            />
-          </a>
+            <Button text="Dashboard" outlined={true} />
+          </Link>
         </div>
       </div>
 
