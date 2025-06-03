@@ -6,6 +6,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Grid from "./Grid";
+import List from "./List";
 
 export default function Tabs({ coins }) {
   const [value, setValue] = useState("grid");
@@ -44,15 +45,11 @@ export default function Tabs({ coins }) {
           </div>
         </TabPanel>
         <TabPanel value="list">
-          <div>
+          <table className="w-[80%] block ml-auto mr-auto">
             {coins.map((item, i) => {
-              return (
-                <p key={i}>
-                  {i + 1}.{item.name}
-                </p>
-              );
+              return <List coin={item} key={i} />;
             })}
-          </div>
+          </table>
         </TabPanel>
       </TabContext>
     </ThemeProvider>
