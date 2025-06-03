@@ -6,7 +6,7 @@
   --black: #111;
   --blue: #3a80e9;
   --grey: #888;
-  --darkgray: #1b1b1b;
+  --darkgrey: #1b1b1b;
   --green: #61c96f;
   --red: #f94141;
 }
@@ -17,7 +17,9 @@ body {
   color: var(--white);
   font-family: "DM Sans", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -64,4 +66,19 @@ img {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
+}
+
+.back-tot-top-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  margin: 1.5rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
 }

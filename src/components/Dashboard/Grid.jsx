@@ -3,7 +3,7 @@ import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 const Grid = ({ coin }) => {
   return (
     <div
-      className={`w-[300px]  bg-[var(--darkgray)] border-2 border-[var(--darkgray)] hover:border hover:border-[var(--green)] hover:duration-300 ease-out  rounded-[0.75rem] hover:${
+      className={`w-[300px]  bg-[var(--darkgray)] hover:border hover:border-[var(--green)] hover:duration-300 ease-out  rounded-[0.75rem] hover:${
         coin?.price_change_percentage_24h < 0 &&
         "hover:border hover:border-[var(--red)] hover:duration-300 ease-out"
       }`}
