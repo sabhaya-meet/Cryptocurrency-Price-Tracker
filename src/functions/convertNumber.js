@@ -1,4 +1,4 @@
-export const convertNumber = () => {
+export const convertNumber = (number) => {
   const numberWithCommas = number.toLocaleString();
   var arr = numberWithCommas.split(",");
 
