@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomeMain from "./pages/HomeMain";
 import DashBoard from "./pages/DashBoard";
-import Coin from "./pages/Coin";
 import Compare from "./pages/Compare";
 import WatchList from "./pages/WatchList";
+import CoinPage from "./pages/CoinPage";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeMain />} />
           <Route path="/dashboard" element={<DashBoard />} />
-          <Route path="/coin/:id" element={<Coin />} />
+          <Route path="/coin/:id" element={<CoinPage />} />
           <Route path="/compare" element={<Compare />} />
           <Route path="/watchlist" element={<WatchList />} />
         </Routes>
