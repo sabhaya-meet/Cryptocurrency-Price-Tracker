@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const CoinInfo = ({ heading, desc }) => {
   const shortDesc =
-    desc?.slice(0, 350) + "<span style='color:var(--blue)'>Read More...</span>";
+    desc.slice(0, 350) + "<span style='color:var(--blue)'>Read More...</span>";
   const longDesc = desc + "<span style='color:var(--blue)'>Read Less...</span>";
 
   const [flag, setFlag] = useState(false);

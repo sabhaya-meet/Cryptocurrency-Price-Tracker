@@ -10,7 +10,7 @@ import LineChart from "../components/Coin/LineChart";
 import { formateDate } from "../functions/formateDate";
 import SelectDays from "../components/Coin/SelectDays";
 import { settingChartData } from "../functions/settingChartData";
-import TogglePriceType from "../components/Coin/PriceType";
+import PriceType from "../components/Coin/PriceType";
 
 const CoinPage = () => {
   const { id } = useParams();
@@ -87,7 +87,7 @@ const CoinPage = () => {
           <div className="bg-[var(--darkgrey)] mx-auto my-[1.5rem] px-4 py-4 rounded-2xl w-[90%] block">
             <div className="flex justify-between">
               <SelectDays days={days} handleDaysChange={handleDaysChange} />
-              <TogglePriceType
+              <PriceType
                 priceType={priceType}
                 handlePriceTypeChange={handlePriceTypeChange}
               />
