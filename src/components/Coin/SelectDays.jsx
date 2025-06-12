@@ -2,10 +2,10 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { useState } from "react";
 
-export default function SelectDays({ days, handleDaysChange }) {
+export default function SelectDays({ days, handleDaysChange, noPTag }) {
   return (
-    <div className="flex justify-start items-center gap-[0.5rem] mb-4">
-      <p>Price Change In</p>
+    <div className="flex justify-start items-center gap-[0.5rem]">
+      {!noPTag && <p>Price Change In</p>}
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"

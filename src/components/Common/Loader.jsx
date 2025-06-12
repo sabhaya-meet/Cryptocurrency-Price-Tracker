@@ -3,7 +3,7 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <div className="flex justify-center items-center w-[100vh] h-[100vh] bg-[var(--black)] text-[var(--blue)] fixed overflow-x-hidden overflow-y-hidden z-50">
+    <div className="flex justify-center items-center w-[100vh] h-[100vh] bg-[var(--black)] text-[var(--blue)]">
       <CircularProgress />
     </div>
   );
