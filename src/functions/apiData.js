@@ -1,37 +1,41 @@
 import axios from "axios";
 
-export const getCoinData = async (id) => {
-  try {
-    const response = await axios.get(
-      `https://api.coingecko.com/api/v3/coins/${id}`
-    );
-    return response.data;
-  } catch (error) {
-    console.error("ERROR getCoinData >>>", error.message);
-    return null;
-  }
+export const getCoinData = (id) => {
+  const myData = axios
+    .get(`https://api.coingecko.com/api/v3/coins/${id}`)
+    .then((response) => {
+      return response.data;
+      //   const data = response.data;
+      //   setCoinData({
+      //     id: data.id,
+      //     name: data.name,
+      //     symbol: data.symbol,
+      //     image: data.image.large,
+      //     desc: data.description.en,
+      //     price_change_percentage_24h:
+      //       data.market_data.price_change_percentage_24h,
+      //     total_volume: data.market_data.total_volume.usd,
+      //     current_price: data.market_data.current_price.usd,
+      //     market_cap: data.market_data.market_cap.usd,
+      //   });
+    })
+    .catch((error) => {
+      console.log("ERROR>>>", error.message);
+      setIsLoading(false);
+    });
+  return myData;
 };
 
-export const getCoinPrices = async (id, days, priceType) => {
-  try {
-    const response = await axios.get(
+export const getCoinPrices = (id, days, priceType) => {
+  const prices = axios
+    .get(
       `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}&interval=daily`
-    );
-    return response.data[priceType];
-  } catch (error) {
-    console.error("ERROR getCoinPrices >>>", error.message);
-    return [];
-  }
-};
-
-export const get100Coins = async () => {
-  try {
-    const response = await axios.get(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-    );
-    return response.data;
-  } catch (error) {
-    console.error("ERROR get100Coins >>>", error.message);
-    return [];
-  }
+    )
+    .then((response) => {
+      return response.data[priceType];
+    })
+    .catch((error) => {
+      console.log("ERROR>>>", error.message);
+    });
+  return prices;
 };

@@ -39,14 +39,14 @@ export default function Tabs({ coins }) {
         </TabList>
         <TabPanel value="grid">
           <div className="flex justify-center items-center flex-wrap gap-[1.5rem]">
-            {coins?.map((coin, i) => {
+            {coins.map((coin, i) => {
               return <Grid coin={coin} key={i} />;
             })}
           </div>
         </TabPanel>
         <TabPanel value="list">
           <table className="w-[80%] block ml-auto mr-auto">
-            {coins?.map((item, i) => {
+            {coins.map((item, i) => {
               return <List coin={item} key={i} />;
             })}
           </table>
